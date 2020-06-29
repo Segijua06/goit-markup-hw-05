@@ -485,9 +485,9 @@ header {
 .page-footer .social {
     padding-top: 20px;
 }
-.page-footer .social-item:not(:last-child) {
+/* .page-footer .social-item:not(:last-child) {
     margin-right: 10px ;
-}
+} */
             /* Footer container end */
 
 
