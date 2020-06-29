@@ -10,6 +10,7 @@
     --main-7-color: rgba(255, 255, 255, 0.4);
     --main-8-color: rgba(255, 255, 255, 0.1);
     --main-9-color: #AFB1B8;
+    --border-color: #ECECEC;
 }
 
 html {
@@ -79,17 +80,20 @@ footer .container {
     text-align: center;
 }
 
-/* img {
+img {
     display: block;
     max-width: 100%;
     height: auto;
-} */
+}
 
+
+        /* Border for portfolio */
+.border {
+    border-bottom: 1px solid var(--border-color);
+}
+        /* Border for portfolio end */
 
         /* Header */
-.border {
-    border-bottom: 1px solid #ECECEC;
-}
 .header-content {
     display: flex;
     align-items: center;   
@@ -294,12 +298,14 @@ header {
     margin-right: 30px;
 }
 .tech-skills-item {
-    display: flex;
-    align-items: flex-end
+    position: relative;
+    /* align-items: flex-end */
 }
 .tech-skills-item-title {    
+    position: absolute;
+    bottom: 0;
     background: rgba(47, 48, 58, 0.8);
-    width: 370px;
+    width: 100%;
     text-align: center;
     color: var(--main-3-color);
     padding-top: 27px;
@@ -309,7 +315,7 @@ header {
     width: 370px;
     height: 274px;    
 } */
-.box1 {
+/* .box1 {
     width: 370px;
     height: 274px;
     background-image: url(../images/box1.jpg);
@@ -323,7 +329,7 @@ header {
     width: 370px;
     height: 274px;
     background-image: url(../images/box3.jpg);
-}
+} */
 
             /* Tech skills container end */
 
