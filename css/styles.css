@@ -60,16 +60,10 @@ ul {
 .link {
     transition: var(--animation);
 }
-.nav-list .link:hover,
-.nav-list .link:focus {
-    padding-bottom: 28px;
-    /* border-bottom: 2px solid var(--main-2-color); */
-    /* transition: var(--animation); */
-}
+
 .link:hover,
 .link:focus {
     color: var(--main-2-color);
-    /* transition: var(--animation); */
 }
 
 header .container,
@@ -147,11 +141,12 @@ header {
 .nav-item a {
     color: var(--main-1-color);
 }
-
+.nav-item .active-page {
+    color: var(--main-2-color);
+}
 .menu-link {
     padding-top: 32px;
     padding-bottom: 32px;
-    /* transition: var(--animation); */
     position: relative;
     display: block;
 }
@@ -167,11 +162,24 @@ header {
     height: 4px;
     background-color: var(--main-2-color);
     border-radius: 2px;
-    opacity: 0;
     transition: var(--animation);
+    transform: scaleX(0);
 }
-.link:hover::after {
-    opacity: 1;
+.menu-link:hover::after {
+    
+    transform: scaleX(1);
+}
+
+.active-page::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-2-color);
+    border-radius: 2px;
+    transform: scaleX(1);
 }
 .contacts-list {
     margin-left: auto;
@@ -190,7 +198,6 @@ header {
 .contacts-item a:focus {
     color: var(--main-2-color);
     fill: var(--main-2-color);
-    /* transition: var(--animation); */
 }
 .contacts-item {
     display: flex;
@@ -215,13 +222,10 @@ header {
 }
         /* Header end*/
 
-
         /* Шапка сайта */
 .hero {
     align-items: center;
     text-align: center;
-    /* padding-top: 200px;
-    padding-bottom: 280px; */
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
         url("../images/main.jpg");
     background-repeat: no-repeat;
@@ -244,7 +248,6 @@ header {
     line-height: 60px;
     letter-spacing: 0.06em;
     color: var(--main-3-color);
-    /* margin-bottom: 30px; */
     text-transform: uppercase;
 }
 
@@ -262,13 +265,11 @@ header {
     letter-spacing: 0.06em;
     border: 0px;
     transition: var(--animation);
-    /* min-width: 200px; */
 }
 
 .hero .button:hover,
 .hero .button:focus {
     background-color: blue;
-    /* transition: var(--animation); */
 }
             /* Шапка сайта */
 
@@ -285,7 +286,6 @@ header {
     width: 1px;
 }
 
-/* .features-item:not(:last-child), */
 .team-item:not(:last-child),
 .clients-item:not(:last-child) {
     margin-right: 30px;
@@ -325,10 +325,6 @@ header {
             /* Features container end */
 
             /* Tech skills container start */
-/* .tech-skills {
-    text-align: center;
-    min-width: 386px;
-} */
 .tech-skills-list {
     display: flex;
 }
@@ -337,7 +333,6 @@ header {
 }
 .tech-skills-item {
     position: relative;
-    /* align-items: flex-end */
 }
 .tech-skills-item-title {    
     position: absolute;
@@ -352,17 +347,13 @@ header {
 }
             /* Tech skills container end */
 
-
             /* Our team container start */
 .our-team {
     text-align: center;
     background-color: var(--main-6-color);
-    /* min-width: 1600px;
-    height: 702px; */
 }
 
 .team-list {
-    /* padding-bottom: 94px; */
     height: 422px;
 }
 .team-item {
@@ -427,8 +418,6 @@ header {
 }
             /* Our team container end */
 
-
-
             /* Clients start*/
 .clients-list {
     display: flex;
@@ -464,8 +453,7 @@ header {
             /* Footer container */
             
 .page-footer {
-    background-color: var(--main-5-color);  
-    /* height: 253px; */
+    background-color: var(--main-5-color);
 }
 
 .logo.inverse,
@@ -476,9 +464,7 @@ header {
 .footer-content {
     padding-top: 60px;
     display: flex;
-    /* align-items: baseline; */
     padding-bottom: 60px;
-    /* justify-content: space-between; */
 }
 
 .address {
@@ -506,15 +492,11 @@ header {
 .subscribe {
     padding-top: 12px;
 }
-/* .footer-content .join-social-network {
-    padding-top: 12px;
-} */
+
 .page-footer .social {
     padding-top: 20px;
 }
-/* .page-footer .social-item:not(:last-child) {
-    margin-right: 10px ;
-} */
+
             /* Footer container end */
 
 
@@ -525,9 +507,6 @@ header {
     border-bottom: 1px solid var(--border-color);
 }
 
-/* .our-project h1 {
-    display: none;
-} */
 .filter-list {
     display: flex;
     justify-content: center;
@@ -535,9 +514,6 @@ header {
     margin-bottom: 50px;    
 }
 
-/* .filter-item {
-    min-width: 73px;
-} */
 
 .filter-item:not(:last-child) {
     margin-right: 8px;
@@ -590,16 +566,13 @@ header {
     padding: 63px 24px;
 }
 .card-image {
-    /* display: block; */
     position: relative;
     overflow: hidden;
 }
 .card-contents {
-    /* border: 1px solid #EEEEEE; */
     background-color: var(--main-3-color);
     padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 0px;
+    padding: 20px 24px 20px 24px;
 }
 .portfolio-item:nth-child(3n) {
     margin-right: 0;
@@ -613,7 +586,6 @@ header {
     line-height: 36px;
     letter-spacing: 0.06em;
     color: var(--main-1-color);
-    margin-top: 20px;
     margin-bottom: 4px;
 }
 .portfolio-text {
@@ -621,7 +593,6 @@ header {
     line-height: 30px;
     letter-spacing: 0.03em;
     color: var(--main-4-color);
-    margin-bottom: 20px;
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
