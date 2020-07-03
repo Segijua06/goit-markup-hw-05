@@ -572,7 +572,7 @@ header {
 .card-contents {
     background-color: var(--main-3-color);
     padding-left: 24px;
-    padding: 20px 24px 20px 24px;
+    padding: 20px 24px;
 }
 .portfolio-item:nth-child(3n) {
     margin-right: 0;
@@ -586,7 +586,7 @@ header {
     line-height: 36px;
     letter-spacing: 0.06em;
     color: var(--main-1-color);
-    margin-bottom: 4px;
+    padding-bottom: 4px;
 }
 .portfolio-text {
     font-size: 16px;
@@ -604,5 +604,4 @@ header {
     transform: translateY(-100%) translateX(0);
     opacity: 1;
 }
-
             /* Portfolio end */
