@@ -11,7 +11,7 @@
     --main-8-color: rgba(255, 255, 255, 0.1);
     --main-9-color: #AFB1B8;
     --border-color: #ECECEC;
-    --animation: 950ms cubic-bezier(0.4, 0, 0.2, 1);
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
