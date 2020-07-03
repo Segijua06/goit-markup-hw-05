@@ -21,7 +21,7 @@ html {
 *,
 ::before,
 ::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 h1,
 h2,
@@ -64,12 +64,12 @@ ul {
 .nav-list .link:focus {
     padding-bottom: 28px;
     /* border-bottom: 2px solid var(--main-2-color); */
-    transition: var(--animation);
+    /* transition: var(--animation); */
 }
 .link:hover,
 .link:focus {
     color: var(--main-2-color);
-    transition: var(--animation);
+    /* transition: var(--animation); */
 }
 
 header .container,
@@ -139,7 +139,6 @@ header {
     margin-right: 50px;
 }
 
-.nav-item,
 .contacts-item {
     padding-top: 32px;
     padding-bottom: 32px;    
@@ -149,6 +148,31 @@ header {
     color: var(--main-1-color);
 }
 
+.menu-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    /* transition: var(--animation); */
+    position: relative;
+    display: block;
+}
+.menu-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-2-color);
+    border-radius: 2px;
+    opacity: 0;
+    transition: var(--animation);
+}
+.link:hover::after {
+    opacity: 1;
+}
 .contacts-list {
     margin-left: auto;
 }
@@ -166,7 +190,7 @@ header {
 .contacts-item a:focus {
     color: var(--main-2-color);
     fill: var(--main-2-color);
-    transition: var(--animation);
+    /* transition: var(--animation); */
 }
 .contacts-item {
     display: flex;
@@ -244,7 +268,7 @@ header {
 .hero .button:hover,
 .hero .button:focus {
     background-color: blue;
-    transition: var(--animation);
+    /* transition: var(--animation); */
 }
             /* Шапка сайта */
 
@@ -427,12 +451,12 @@ header {
 .clients-item a:hover,
 .clients-item a:focus {
     border-color: var(--main-2-color);
-    transition: var(--animation);
+    /* transition: var(--animation); */
 }
 .clients-item a:hover .clients-icon,
 .clients-item a:focus .clients-icon {
     fill: var(--main-2-color);
-    transition: var(--animation);
+    /* transition: var(--animation); */
 }
             /* Clients end */
 
@@ -531,14 +555,14 @@ header {
     /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     border-radius: 4px;
     border: 0;
-    
+    transition: var(--animation);
 }
 
 .our-project .button:hover,
 .our-project .button:focus {
     background-color: var(--main-2-color);
     color: var(--main-3-color);
-    transition: var(--animation);
+    /* transition: var(--animation); */
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -602,18 +626,10 @@ header {
 .portfolio-item:hover,
 .portfolio-item:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-    /* border: 1px solid #EEEEEE;     */
 }
 
-/* .portfolio-item .item-link:hover,
-.portfolio-item .item-link:focus {
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-    border: 1px solid #EEEEEE;
-    
-} */
-
-.portfolio-item .item-link:hover .portfolio-item-description,
-.portfolio-item .item-link:focus .portfolio-item-description {
+.portfolio-item:hover .portfolio-item-description,
+.portfolio-item:focus .portfolio-item-description {
     transform: translateY(-100%) translateX(0);
     opacity: 1;
 }
