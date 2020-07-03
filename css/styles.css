@@ -11,7 +11,7 @@
     --main-8-color: rgba(255, 255, 255, 0.1);
     --main-9-color: #AFB1B8;
     --border-color: #ECECEC;
-    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --animation: 950ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -57,9 +57,9 @@ ul {
     margin: 0px auto 0px auto;   
 }
 
-/* .link {
+.link {
     transition: var(--animation);
-} */
+}
 .nav-list .link:hover,
 .nav-list .link:focus {
     padding-bottom: 28px;
@@ -237,6 +237,7 @@ header {
     line-height: 30px;
     letter-spacing: 0.06em;
     border: 0px;
+    transition: var(--animation);
     /* min-width: 200px; */
 }
 
@@ -372,6 +373,7 @@ header {
     border-radius: 50%;
     width: 44px;
     height: 44px;
+    transition: var(--animation);
 }
 .social-item:not(:last-child) {
     margin-right: 10px;
@@ -380,6 +382,7 @@ header {
     width: 20px;
     height: 20px;
     fill: var(--main-9-color);
+    
 }
 .social-item a:hover .social-icon,
 .social-item a:focus .social-icon {
@@ -414,10 +417,12 @@ header {
     width: 170px; 
     height: 90px;
     border: 1px solid var(--main-9-color);
-    border-radius: 4px;           
+    border-radius: 4px;  
+    transition: var(--animation);         
 }
 .clients-icon {
     fill: var(--main-9-color);
+    transition: var(--animation);
 }
 .clients-item a:hover,
 .clients-item a:focus {
@@ -513,6 +518,9 @@ header {
 .filter-item:not(:last-child) {
     margin-right: 8px;
 }
+.filter-item .button {
+    transition: var(--animation);
+}
 
 .our-project .button {
     margin: 0;
@@ -523,6 +531,7 @@ header {
     /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     border-radius: 4px;
     border: 0;
+    
 }
 
 .our-project .button:hover,
@@ -550,7 +559,7 @@ header {
     
     transition: var(--animation);
     color: var(--main-3-color);
-    background-color: var(--main-2-color);
+    background: rgba(33, 150, 243, 0.9);
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.03em;
